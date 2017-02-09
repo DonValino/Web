@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Message Alert</title>
+	<script>
+		function ShowMessage() {
+		
+			var formMessage = document.forms['MessageForm']['txtMessage'].value;
+			
+			if (formMessage == ""){
+			
+				alert("Error: No Message to Display");
+				return false;
+			
+			} else { 
+				
+				alert(formMessage);
+				
+			}
+			
+			return true;
+		}
+	</script>
+</head>
+<body>
+		<form name="MessageForm" action="" method="post" onSubmit="return ShowMessage();">
+		
+			<p>
+				<label id="Label1">Enter a Message:</label>
+				<input name="txtMessage" type="text" size="50" maxlength="50">
+			</p>
+			
+			<p>
+			<input name="Submit1" type="submit" value="submit">
+			</p>
+			
+		</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<title>Message Alert</title>
+	<script>
+		// JavaScript Here
+		//Description:  Display a message in an  alert box
+		function add(){
+			//Read value from form field
+			var formMessage = document.forms['MessageForm']['input1'].value;
+			var formMessage1 = document.forms['MessageForm']['input2'].value;
+			var total = Number(formMessage) + Number(formMessage1);
+			document.getElementById("Answer").innerHTML = total;
+			
+			
+			return true;
+			}
+		function subtract(){
+			//Read value from form field
+			var formMessage = document.forms['MessageForm']['input1'].value;
+			var formMessage1 = document.forms['MessageForm']['input2'].value;
+			var total = Number(formMessage) - Number(formMessage1);
+			document.getElementById("Answer").innerHTML = total;
+			
+			
+			return true;
+			}
+		function multiply(){
+			//Read value from form field
+			var formMessage = document.forms['MessageForm']['input1'].value;
+			var formMessage1 = document.forms['MessageForm']['input2'].value;
+			var total = Number(formMessage) * Number(formMessage1);
+			document.getElementById("Answer").innerHTML = total;
+			
+			
+			return true;
+			}
+		function divide(){
+			//Read value from form field
+			var formMessage = document.forms['MessageForm']['input1'].value;
+			var formMessage1 = document.forms['MessageForm']['input2'].value;
+			var total = Number(formMessage) / Number(formMessage1);
+			document.getElementById("Answer").innerHTML = total;
+			
+			
+			return true;
+			}
+	</script>
+</head>
+<body>
+		<form name="MessageForm" action="" method="post">
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="input1" type="text" size="5" maxlength="5" padding:100px>
+				<input name="input2" type="text" size="5" maxlength="5">
+				<label class="" id="Answer"></label>
+			</p>
+			<p>
+				<a href="#" onclick="add();">Add</a>
+				&nbsp;<a href="#" onclick="subtract();">Subtract</a>
+				&nbsp;<a href="#" onclick="multiply();">Multiply</a>
+				&nbsp;<a href="#" onclick="divide();">Divide</a>
+			</p>                                                                                                       
+		</form>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

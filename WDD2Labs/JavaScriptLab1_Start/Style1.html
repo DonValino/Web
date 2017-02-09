@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>JavaScript Lab - Click links to select a page style</title>
+	
+	<!-- Note the following page element has id="stylesheet" -->
+	<link rel="stylesheet" href="assets/css/default.css" id="stylesheet" />
+	
+	<script>
+		// JavaScript Here
+		function ChangeStyle(style)
+		{
+		document.getElementById('stylesheet').href ="./assets/css/" + style + ".css";
+			return true;	
+		}		
+	</script>
+</head>
+<body>
+	<h2>Choose a stylesheet for this page</h2>
+	<a href="#" onclick="ChangeStyle('black');">black</a>
+	<a href="#" onclick="ChangeStyle('white');">white</a>
+</body>
+</html>

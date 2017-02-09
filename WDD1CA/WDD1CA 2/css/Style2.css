@@ -1,0 +1,397 @@
+body
+{
+	font-family: Arial,Helvitica,sans-serif;
+	font-size: 1em;
+	background-color: #D8D8D8;
+}
+
+#Header
+{
+
+	border-top: 1px solid green;
+	border-bottom: 1px solid green;
+	width: 100%;
+	margin-left: 0em;
+	margin-top: -10em;
+	margin-bottom: 0.2em;
+	height: 2em;
+	background-color: #CEF6CE;
+}
+
+#Header h1
+{
+	margin-left: 530px;
+	margin-top:10px;
+	text-decoration: underline;
+	color:blue;
+	font-style: verdana;
+	font-size: 2em;
+}
+#Container
+{
+	padding-top: 10em;
+
+	padding-bottom: 33.5em;
+
+	width: 100%;
+
+	margin-right: auto;
+
+	margin-left: auto;
+
+	background-color: #FFFFFF;
+	border: 1px solid red;
+	
+
+}
+#Navigation
+{
+
+
+	width: 80%;
+	height:0px;
+	border-bottom: 1px solid red;
+	border-top: 1px solid red;
+	margin-left: 5px;
+	padding-top:10px;
+
+}
+
+#Navigation li
+{
+
+	display: inline;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-right:70px;
+	padding-top: 10px;
+	paddding-bottom: 10px;
+	
+}
+
+
+	
+#Navigation a
+{
+	text-decoration: underline;
+	margin-bottom: 10px;
+	margin-top:10px;
+	margin-left: 0px;
+	padding-left:0px;
+}
+#Navigation a:hover
+{
+	color: violet;
+}
+
+#Navigation a:focus
+{
+	color: darkblue;
+}
+
+#Navigation a:active
+{
+	color:red;
+}	
+#SearchBar
+{
+	Border: 1px solid red;
+	height: 100%;
+	padding-bottom:10px;
+	margin-top:5px;
+	width: 600px;
+	margin-left: 80px;
+	margin-top: -30px;
+}
+
+#search
+{
+
+	width: 150px;
+	padding-bottom:10px;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#SeasonalSpecial
+{
+	Border: 1px solid black;
+	width: 200px;
+	height: 500px;
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+#SeasonalSpecialTitle
+{
+	border-bottom: 1px solid red;
+	font-weight:bold;
+}
+
+#SeasonalSpecialTitle p
+{
+	margin-top: 10px;
+	height:25px;
+	margin-left: 10px;
+}
+
+#FeaturedProducts
+{
+	border: 1px solid black;
+	width: 850px;
+	margin-left: 13.5em;
+	margin-top:-525px;
+	height:525px;
+}
+
+#FeaturedProductsTitle
+{
+	border: 1px solid red;
+}
+
+#FeaturedProductsTitle p
+{
+	padding-top: 10px;
+	height:35px;
+	margin-left: 10px;
+	font-weight:bold;
+}
+
+#ClickSeason
+{
+	border:1px solid blue;
+	margin-top: 430px;
+}
+
+#ClickSeason a
+{
+	list-style-type: none;
+	text-decoration: none;
+}
+#ClickSeason a:hover
+{
+	color: #08088A;
+}
+#ClickSeason li
+{
+	margin-left: -20px;
+}
+
+#ClickSeason ul
+{
+	list-style-type: none;
+}
+
+#ClickFeatured
+{
+	border:1px solid Blue;
+	margin-top: 430px;
+	padding-bottom: 19px;
+	
+}
+
+
+#ClickFeatured a
+{
+	list-style-type: none;
+	text-decoration: none;
+	color:blue;
+	font-size:20px;
+}
+#ClickFeatured a:hover
+{
+	color: #08088A;
+}
+#ClickFeatured li
+{
+	margin-left: 250px;
+	list-style-type: none;
+	margin-top:12px;
+}
+
+#ClickFeatured ul
+{
+	list-style-type: none;
+}
+
+#Basket
+{
+	border: 1px solid black;
+	width:95%;
+	height: 250px;
+	margin-left:1080px;
+	margin-top:-525px;
+}
+
+#BasketTitle
+{
+	border: 1px solid red;
+	font-weight:bold;
+}
+
+#BasketTitle p
+{
+	padding-top: 10px;
+	height:35px;
+	margin-left: 10px;
+}
+
+#ClickBasket
+{
+	border:1px dotted blue;
+	margin-top: 120px;
+	width:71%;
+	margin-left:50px;
+	padding-right:-50px;
+	margin-top:20px;
+	padding-bottom:10px;
+}
+
+#ClickBasket a
+{
+	text-decoration: none;
+	font-size:13px;
+	margin-left:0px;
+	margin-right:10px;
+}
+
+#ClickBasket a:hover
+{
+	color: #08088A;
+}
+
+#ClickBasket li
+{
+	list-style-type: none;
+	margin-top:10px;
+}
+
+#LogIn
+{
+	border: 1px solid black;
+	width:95%;
+	height: 190px;
+	margin-left:1080px;
+	margin-top:10px;
+}
+
+
+#LogInTtitle
+{
+	border: 1px solid red;
+	font-weight:bold;
+}
+
+#LogInTtitle p
+{
+	padding-top: 10px;
+	height:35px;
+	margin-left: 10px;
+}
+
+#SignLogIn
+{
+	border:1px dotted blue;
+	width:71%;
+	margin-left:50px;
+	margin-top:10px;
+	padding-right:-50px;
+	margin-top:105px;
+	padding-bottom:10px;
+}
+
+#SignLogIn a
+{
+	text-decoration: none;
+	font-size:15px;
+	margin-left:20px;
+	margin-right:10px;
+}
+
+#SignLogIn a:hover
+{
+	color: #08088A;
+}
+
+#SignLogIn li
+{
+	list-style-type: none;
+	margin-top:10px;
+}
+
+#ClickSignUp
+{
+	border:1px dotted blue;
+	width:71%;
+	margin-left:50px;
+	padding-right:-50px;
+	margin-top:5px;
+	margin-bottom:10px;
+	padding-bottom:10px;
+}
+
+#ClickSignUp a
+{
+	text-decoration: none;
+	font-size:15px;
+	margin-left:20px;
+	margin-right:10px;
+}
+
+#ClickSignUp a:hover
+{
+	color: #08088A;
+}
+
+#ClickSignUp li
+{
+	list-style-type: none;
+	margin-top:10px;
+}
+
+#Password
+{
+	height:10px;
+	width: 10px;
+	margin-top:10px;
+	padding-left:5px;
+	
+}
+
+
+#Email
+{
+	height:10px;
+	width: 10px;
+	padding-left:5px;
+}
+
+#EmailBox
+{
+	border:1px solid red;
+	width: 90%;
+	margin-left:80px;
+	margin-top:-50px;
+}
+
+#PasswordBox
+{
+	border:1px solid red;
+	width: 90%;
+	margin-left:80px;
+	margin-top:10px;
+}
+
+#BasketItem
+{
+	border: 1px solid red;
+	width:80%;
+	margin-left:40px;
+	height:120px;
+	padding-left:5px;
+	padding-right:5px;
+
+}
+
+

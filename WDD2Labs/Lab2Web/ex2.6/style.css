@@ -1,0 +1,32 @@
+	#info {
+		margin-bottom:2em;
+	}
+	#raw_json {
+		border:1px solid #333;
+		background-color:#ccc;
+		padding: 2em;
+		word-wrap: break-word;
+		margin-bottom: 2em;
+	}
+	#parsed_json {
+		padding:2em;
+		border: 1px solid blue;
+	}
+	h2 {
+		margin:0;
+		padding:0;
+	}
+	
+	.weather{
+		font-size: 1em;
+		color: red;
+	}
+	
+	.weather label{
+		font-weight: bold;
+		float: left;
+		color: darkblue;
+		width: 30%;
+		text-align: right;
+		margin-right: 1%;
+	}

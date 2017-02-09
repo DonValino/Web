@@ -1,0 +1,86 @@
+﻿body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #C0C0C0;
+	font-size: 1em;
+	color: #333333;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+
+p {
+	color: #333333;
+}
+
+a {
+	text-decoration: none;
+	color: #CC0000;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+a:hover {
+	font-weight: bold;
+	color: #0000FF;
+}
+
+#content
+{
+	margin: 0px auto 0px auto;
+	padding: 10px;
+	background: white;
+	width: 80%;
+	max-width: 800px;
+	text-align: center;
+}
+
+form {
+}
+
+fieldset {
+	border: 1px dotted #CC0000;
+	width: 60%;
+	padding: 5px;
+	margin: 5px;
+}
+legend {
+	color: #fff;
+	background: #CC0000;
+	border: 1px solid #781351;
+	padding: 2px 6px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+
+label {
+	text-align: right;
+	width: 9em;
+	float: left;
+	display: block;
+	margin-right: 0.5em;
+}
+
+.submit {
+	margin-left: 7em;
+}
+
+#wrongGuess {
+	font-size: 1em;
+	color: #FF0000;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}

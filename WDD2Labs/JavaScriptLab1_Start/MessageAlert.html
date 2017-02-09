@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Message Alert</title>
+	<script>
+		// JavaScript Here
+		//Description:  Display a message in an  alert box
+		function showMessage(){
+			//Read value from form field
+			var formMessage = document.forms['MessageForm']['txtMessage'].value;
+			
+			//check if the form input field contains anything
+			//If not display error
+			if(formMessage == ""){
+				alert("Error: No Message to Display");
+				
+				//Return false to indicate error state - for will be displayed with previous values
+				return false;
+			}
+			//Otherwise display the message
+			else
+			{
+				alert(formMessage);
+			}
+			//(Optional) Return true to indicate completion.
+			return true;
+			}
+	</script>
+</head>
+<body>
+		<form name="MessageForm" action="" method="post" onsubmit="return showMessage();">
+			<p>
+				<label id="Label1">Enter a Message:</label>
+				<input name="txtMessage" type="text" size="50" maxlength="50">
+			</p>
+			<p><input name="Submit1" type="submit" value="submit" ></p>                                                                                                       
+		</form>
+</body>
+</html>

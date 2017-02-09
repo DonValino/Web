@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>JavaScript Lab - Click links to select a page style - Version 2</title>
+	
+	<!-- Note the following page element has id="stylesheet" -->
+	<link rel="stylesheet" href="assets/css/default.css" id="stylesheet" />
+	
+	<script>
+		// JavaScript Here
+		function ChangeStyle()
+		{
+		    var style = document.StyleForm.colour.options[document.StyleForm.colour.selectedIndex].value;
+			document.getElementById('stylesheet').href = "./assets/css/" + style + ".css";
+			return true;	
+		}
+		
+	</script>
+</head>
+<body>
+	<h2>Choose a stylesheet for this page</h2>
+		<form name="StyleForm" action="#" onsubmit="return false;">
+			<label id="label1">StyleSheet Changer :</label>
+			
+			<select name="colour" onchange="return ChangeStyle();">
+				<option value="default">Default Theme</option>
+				<option value="red">Red Theme</option>
+				<option value="blue">Blue Theme</option>
+				<option value="green">Green Theme</option>
+				<option value="black">Black Theme</option>
+				<option value="white">White Theme</option>
+	
+			</select>
+			
+		</form>
+		<p>&nbsp;</p>
+</body>
+</html>

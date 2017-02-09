@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script>
+	$(document).ready(function(){
+    		$("#submit").click(function(){
+var username = $('#uname').val();
+var password = $('#pass').val();
+		if(username == "jake" && password == "letmein")
+		{
+        	     $("#wrongorrightpassword").text('Log in Successfull');
+		}else{
+		     $("#wrongorrightpassword").text('Wrong username/password');
+			$('#uname').val("");
+			$('#pass').val("");
+		}
+   		 });
+		$("#cancel").click(function(){
+			$('#uname').val("");
+			$('#pass').val("");
+		});
+	});
+  </script>
+</head>
+<body>
+Username: <input type="text" id="uname" name="Uname"><br>
+Password: <input type="text" id="pass" name="Password"><br>
+<button id="cancel">Cancel</button>
+ 
+<input type="submit" id = "submit" value="A submit button">
+ 
+<a id = "wrongorrightpassword" href="#">Can't remember your password?</a>
+ 
+ 
+</body>
+</html>

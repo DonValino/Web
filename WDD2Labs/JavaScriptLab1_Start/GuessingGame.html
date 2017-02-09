@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+	<meta content="en-ie" http-equiv="Content-Language">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+	<link id="stylesheet" href="./assets/css/game.css" rel="stylesheet" type="text/css">
+	
+	<script src="./assets/js/game.js"></script>
+	
+	<script type="text/javascript">
+	
+	
+		// The number which the user will try to guess
+		var Number = 53;
+
+			
+		function GuessNumber()
+		{
+			// 1. Read the value from the form
+		    var guess = document.guessForm.value;
+			
+			// 2. Check if number was guessed corrrectly
+			// If it was then inform the user using an alert and return true
+			// If not then let user know if they were too low or too high and return false
+			// Note For incorrect guesses, feedback should be displayed
+			// in the '<span id="wrongGuess"></span>' element (see below)
+		}
+	
+	</script>
+		
+</head>
+
+	<body>
+		<div id="content">
+		
+			<h1>Guess The Number Game</h1>
+			
+				<!--	The Guess Number form
+						Note the onsubmit event handler - you are required to write the JavaScript
+						for the GuessNumber function
+						The value returned by GuessNumber will determine if the form is reset (and the page reloaded) or not
+						true - reset form
+						false - form will not be reset 	
+						Note that JavaScript values will be retained between guesses unless
+						the form is reset or the page is reloaded.
+				-->
+				<form name="guessForm" method="" action="" onsubmit="return GuessNumber();">
+					<fieldset>
+						<legend>Guess the number (between 1 and 100)</legend>
+							<p></p>
+							<p>
+								<label for="firstName">My Guess:</label>
+								<input type="text" name="guess"/>
+								<!-- Display Wrong guess feedback in the folowing element (hint: innerHTML)-->
+								<span id="wrongGuess"></span>
+							</p>
+							<p>
+								<input type="submit" name="SubmitForm" value="Guess" class="submit" />
+							</p>
+	
+					</fieldset>
+				</form>
+		</div>
+	</body>
+
+</html>

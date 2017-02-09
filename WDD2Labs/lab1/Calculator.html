@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link id="stylesheet" href="./assets/css/cal.css" rel="stylesheet" type="text/css">
+	<script>
+	
+		function Add() {
+		
+			var x = parseInt(document.forms["num"]["num1"].value);
+			var y = parseInt(document.forms["num"]["num2"].value);
+			var ans;
+			
+				ans = x + y;
+				alert(x + " + " + y + " = " + ans);
+			
+		}
+		
+		function Subtract() {
+		
+			var x = parseInt(document.forms["num"]["num1"].value);
+			var y = parseInt(document.forms["num"]["num2"].value);
+			var ans;
+			
+				ans = x - y;
+				alert(x + " - " + y + " = " + ans);
+			
+		}
+		
+		function Multiply() {
+		
+			var x = parseInt(document.forms["num"]["num1"].value);
+			var y = parseInt(document.forms["num"]["num2"].value);
+			var ans;
+			
+				ans = x * y;
+				alert(x + " x " + y + " = " + ans);
+			
+		}
+		
+		function Divide() {
+		
+			var x = parseInt(document.forms["num"]["num1"].value);
+			var y = parseInt(document.forms["num"]["num2"].value);
+			var ans;
+			
+				ans = x / y;
+				alert(x + " / " + y + " = " + ans);
+			
+		}
+		
+	</script>
+</head>
+<body>
+
+	<div id="body">
+		<form name="num" action="" method="post">
+		
+			<h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Calculator </h1>
+		
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input name="num1" type="text" size="5" maxlength="5">
+				<input name="num2" type="text" size="5" maxlength="5">
+			</p>
+			
+			<table cellspacing="10">
+			<tr>
+				<td><a 	href="#" onClick ="return Add();" >Add</a></td>
+				<td><a 	href="#" onClick ="return Subtract();" >Subtract</a></td>
+				<td><a 	href="#" onClick ="return Multiply();" >Multiply</a></td>
+				<td><a 	href="#" onClick ="return Divide();" >Divide</a></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+</body>
+</html>

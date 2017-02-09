@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Start the Application using the ng-app directive -->
+<html ng-app="calcMod">
+	<head>
+		<title>Calculator Application</title>
+	</head>
+	<body>
+	  <!-- Start controller scope -->
+		<div ng-controller="calcCtrl">
+		  <p>
+			  <label>Number 1:</label>
+			  <!-- Use ng-model to define a model variable-->
+			  <input type="number" ng-model="calc.num1">
+			  <select ng-model="calc.operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+		      </select>
+			  <label>Number 2:</label>
+			  <!-- Use ng-model to define a model variable  -->
+			  <input type="number" ng-model="calc.num2">
+			</p>
+			<!-- Bind the model value to an element using an expressions -->
+			<p>Answer: {{calc.num1 + " " + calc.operator + " " + calc.num2 + " = " + calc.getResult()}}</p>
+		</div> <!-- End controller scope -->
+		
+		<!-- Load AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<!-- Load Application code -->
+		<script src="calculator.js"></script>
+	</body>
+</html>

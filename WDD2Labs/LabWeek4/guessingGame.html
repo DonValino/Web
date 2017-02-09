@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html ng-app="guessMod>
+
+<head>
+    <title></title>
+	<meta content="en-ie" http-equiv="Content-Language">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+	<link id="stylesheet" href="game.css" rel="stylesheet" type="text/css">
+	
+	<script src="GuessingGame.js"></script>
+	
+</head>
+
+	<body>
+		<div ng-controller="guessCtrl">
+		
+			<h1>Guess The Number Game</h1>
+			
+				<!--	The Guess Number form
+						Note the onsubmit event handler - you are required to write the JavaScript
+						for the GuessNumber function
+						The value returned by GuessNumber will determine if the form is reset (and the page reloaded) or not
+						true - reset form
+						false - form will not be reset 	
+						Note that JavaScript values will be retained between guesses unless
+						the form is reset or the page is reloaded.
+				-->
+				<form name="guessForm" method="" action="" onsubmit="return GuessNumber();">
+					<fieldset>
+						<legend>Guess the number (between 1 and 100)</legend>
+							<p></p>
+							<p>
+								<label for="firstName">My Guess:</label>
+								<input type="number" ng-model="guess.guessNum"/>
+
+								
+								<!-- Display Wrong guess feedback in the following element (hint: innerHTML)-->
+								<span id="wrongGuess"></span>
+								<p>Answer: {{guessCtrl.getResult()}}</p>
+							</p>
+	
+					</fieldset>
+				</form>
+		</div>
+	</body>
+	
+	<!-- Load AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<!-- Load Application code -->
+		<script src="calculator.js"></script>
+
+</html>

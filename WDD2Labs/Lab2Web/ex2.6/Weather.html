@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+
+
+
+
+</head>
+
+<body>
+<h1>Basic AJAX in jQuery</h1>
+
+	<div id="info">
+        <h3> This example is based on <a href="http://jsfiddle.net/rover/HWAFG/">this one</a></h3> 
+		<p>The data comes from a simple weather API, called OpenWeatherMap: <a href="http://openweathermap.org/API">http://openweathermap.org/API</a>
+		</p>
+		<p>Take the JSON results in the area below and paste them into this JSON editor to get a better look at the structured data: <a href="http://www.jsoneditoronline.org/">http://www.jsoneditoronline.org</a>
+		</p>
+		<p>jQuery AJAX documentation: <a href="http://learn.jquery.com/ajax/">http://learn.jquery.com/ajax</a>. The documentation for the jQuery.get() function in particular: <a href="http://api.jquery.com/jQuery.get/">http://api.jquery.com/jQuery.get/</a> 
+		</p>
+	</div>
+	<form name="weatherForm" action="" method="post" onsubmit="return getWeather();">
+		<p>
+			<label>Location</label>
+			<input name="location" type="text" autocomplete="on"></>
+		</p>
+		<p>
+			<input name="submitForm" type="submit" />
+		</p>
+	</form>
+	
+	
+	<h2>Parsed JSON object</h2>
+
+	<div id="parsed_json">
+	</div>
+
+	<h2>Raw JSON string</h2>
+
+	<div id="raw_json"><pre></pre>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	
+	
+<script>
+/*
+Here is the jQuery .get() function. There are some other jQuery functions that deal with Ajax, but this is a simple one.
+Notice the parameters that get() takes: a URL and an anonymous function.
+The anonymous function takes as a parameter, a variable that will hold the data that comes in from the URL (check out the URL in a browser to see what's there). 
+A function used in this way is called a *callback function*. You will see this term in the jQuery documentation.
+The parameter is called 'response' here, but you could call it whatever you want.
+The URL is this example returns JSON formatted text. JSON is literally the code for a javascript object, so javascript turns it into an object that you can use.
+
+*/
+
+	function getWeather(){
+		var loc = document.weatherForm.location.value;
+		var url = "http://api.openweathermap.org/data/2.5/weather";
+		
+		$.ajax({
+			url: url,
+			data: {
+				q: loc,
+				units: "metric"	
+			},
+			type: 'GET',
+			dataType:"jsonp",
+			success: function (response) {
+				/* The JSON.stringify() method just takes the object and turns it back into text (aka, a string). 
+				I'm only doing this here to show what the string looks like.*/
+			
+				// show the raw json
+				$('#raw_json pre').html(JSON.stringify(response, null, 2));
+			
+				/* Working with the 'response' object (not string) here, now we can access the different properties available. 
+				(Look at jsoneditoronline.org to see the structure of the properties.) */
+				var text = '<div class="weather"><p><label>Location: </label>' + response.name + ', ' + response.sys.country +  '<br/>';
+				text += '<label>Current Temperature: </label>' + response.main.temp + '&deg;C<br/>';
+				text += '<label>Weather Conditions: </label>' + response.weather[0].description + '<br/></p></div>';
+				$('#parsed_json').append(text);
+			},
+            error: function(jqXHR, textStatus, error) {
+              alert( "error: " + jqXHR.responseText);
+            }
+		});
+		
+		return false;
+	}
+</script>
+</body>
+</html>
